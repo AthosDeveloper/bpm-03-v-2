@@ -14,7 +14,7 @@ public class TurmaTest {
 
     }
     @BeforeEach
-    public  void setUp(){
+    public  void setUp() throws  Exception{
         Pessoa pessoa1 = new Pessoa(1, "fernando");
         Pessoa pessoa2 = new Pessoa(2, "juliana");
         Pessoa pessoa3 = new Pessoa(3, "gabriela");
@@ -52,7 +52,7 @@ public class TurmaTest {
     }
 
     @Test
-    public void deveRetornarSucessoAdicionarPessoa() throws Exception {
+    public void deveRetornarSucessoAdicionarPessoa() throws  Exception {
         this.turma.adicionarPessoa(new Pessoa(4, "teste"));
 
         assert this.turma.getPessoas().size() == 4;
@@ -60,7 +60,7 @@ public class TurmaTest {
     }
 
     @Test
-    public void deveRetornarSucessoRemoverTodasPessoas() throws Exception {
+    public void deveRetornarSucessoRemoverTodasPessoas()  {
         this.turma.removerTodasPessoas();
 
         assert this.turma.getPessoas().isEmpty();
